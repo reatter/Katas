@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit FizzBuzz</title>
+
+    <link rel="stylesheet"
+    href="https://code.jquery.com/qunit/qunit-2.5.1.css">
+
+
+    <!-- import fizzbuzz.js -->
+    <script src="fizzbuzz.js"></script>
+
+
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <!-- <script src="https://code.jquery.com/qunit/qunit-2.5.1.js"></script> -->
+
+    <!-- import qunit.js -->
+    <script src="file://c:/JS/qunit-2.5.1/qunit-2.5.1.js"></script>
+
+    <!-- here the tests start -->
+    <script>
+
+    QUnit.test("a basic test example", function(assert) {
+        var value = "hello";
+        assert.equal(value, "hello", "We expect value to be hello");
+    });
+
+    QUnit.test("input 1 results in output 1", function(assert) {
+
+        let input = 1;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,input);
+    });
+
+    QUnit.test("input 2 results in output 2", function(assert) {
+
+        let input = 2;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,input);
+    });
+
+    QUnit.test("input 3 results in output 'Fizz''", function(assert) {
+
+        let input = 3;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,"Fizz");
+    });
+
+    QUnit.test("input 4 results in output 4", function(assert) {
+
+        let input = 4;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,input);
+    });
+
+    QUnit.test("input 5 results in output 'Buzz''", function(assert) {
+
+        let input = 5;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,"Buzz");
+    });
+
+    QUnit.test("input 6 results in output 'Fizz''", function(assert) {
+
+        let input = 6;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,"Fizz");
+    });
+
+    QUnit.test("input 10 results in output 'Buzz''", function(assert) {
+
+        let input = 10;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,"Buzz");
+    });
+
+    QUnit.test("input 15 results in output 'FizzBuzz!''", function(assert) {
+
+        let input = 15;
+
+        let output = fizzbuzz(input);
+
+        assert.equal(output,"FizzBuzz!");
+    });
+
+    </script>
+</body>
+</html>
