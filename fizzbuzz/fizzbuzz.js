@@ -16,7 +16,6 @@ function fizzbuzz(number) {
             returnValue += "Buzz!";
         else
             returnValue = "Buzz";
-
     }
 
 
