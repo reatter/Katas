@@ -107,13 +107,83 @@
         assert.strictEqual(output,expected, "returned number was " + expected );
     });
 
-    QUnit.test("tryLargestNumber([1,2], 3) returns [2,1]", function(assert) {
+
+
+    QUnit.test("removeMaxFromList([1,2,3]]) returns [1,2]", function(assert) {
+
+        let list = [1,2,3];
+
+        let output = removeMaxFromList(list).toString();
+
+        let expected = [1,2].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("removeMaxFromList([1,2,8,3]]) returns [1,2,3]", function(assert) {
+
+        let list = [1,2,8,3];
+
+        let output = removeMaxFromList(list).toString();
+
+        let expected = [1,2,3].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("removeMaxFromList([1,-2,-8,-3]]) returns [-2,-8,-3]", function(assert) {
+
+        let list = [1,-2,-8,-3];
+
+        let output = removeMaxFromList(list).toString();
+
+        let expected = [-2,-8,-3].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("removeMaxFromList([]) returns []", function(assert) {
+
+        let list = [];
+
+        let output = removeMaxFromList(list).toString();
+
+        let expected = [].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("removeMaxFromList([88]) returns []", function(assert) {
+
+        let list = [88];
+
+        let output = removeMaxFromList(list).toString();
+
+        let expected = [].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("tryNumbers([1,2], 3) returns [2,1]", function(assert) {
 
         let list = [1,2];
 
         let k = 3;
 
-        let output = tryLargestNumber(list,k).toString();
+        let output = tryNumbers(list,k).toString();
+
+        let expected = [2,1].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
+    QUnit.test("tryNumbers([1,2,3], 3) returns [2,1]", function(assert) {
+
+        let list = [1,2,3];
+
+        let k = 3;
+
+        let output = tryNumbers(list,k).toString();
 
         let expected = [2,1].toString();
 

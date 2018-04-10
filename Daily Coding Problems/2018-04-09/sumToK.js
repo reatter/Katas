@@ -35,13 +35,42 @@ function findMax(list) {
     return max;
 }
 
+function removeMaxFromList(list) {
+    let largestNumber = findMax(list);
+    if (largestNumber != -Infinity) {
+            list.splice(list.indexOf(largestNumber),1);
+    }
+    return list;
+}
+
 /*
 tries a number by substracting it from k and
 looking up if there is the missing other summand
 return found numbers, or delete number from list
 */
-function tryNumber(number, list, k) {
+function tryNumbers(list, k) {
 
+    let numbers = [];
+
+    let largestNumber = findMax(list);
+
+    list = removeMaxFromList(list);
+
+    let secondNumber;
+
+    for(var i = 0; i < list.length; i++) {
+        secondNumber = list[i];
+        if (secondNumber + largestNumber == k) {
+            numbers = [largestNumber, secondNumber];
+        }
+    }
+
+    /*
+    recursive call here to test all numbers, until list is empty or pair is found
+    */
+    while (numbers == [] || list != []) {
+        tryNumbers(list, k);
+    }
 
 
     return numbers;
