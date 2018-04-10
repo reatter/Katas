@@ -24,17 +24,100 @@
     <script>
 
 
-    QUnit.test("sumToK(k=0, [0,0]) returns true)", function(assert) {
+    QUnit.test("removeLargeNumbers(k=1, [0,1,2] returns [0,1])", function(assert) {
 
-        let k = 0;
+        let k = 1;
 
-        let list = [0,0];
+        let list = [0,1,2];
 
-        let output = sumToK(k,list);
+        let output = removeLargeNumbers(k,list).toString();
 
-        let expected = true;
+        let expected = [0,1].toString();
 
-        assert.equal(output,expected);
+        assert.strictEqual(output,expected, "returned Array was [" + expected + "]");
+    });
+
+    QUnit.test("removeLargeNumbers(k=1, [5,6,7] returns [])", function(assert) {
+
+        let k = 1;
+
+        let list = [5,6,7];
+
+        let output = removeLargeNumbers(k,list).toString();
+
+        let expected = [].toString();
+
+        assert.strictEqual(output,expected, "returned Array was [" + expected + "]");
+    });
+
+    QUnit.test("removeLargeNumbers(k=8, [5,6,7] returns [5,6,7])", function(assert) {
+
+        let k = 8;
+
+        let list = [5,6,7];
+
+        let output = removeLargeNumbers(k,list).toString();
+
+        let expected = [5,6,7].toString();
+
+        assert.strictEqual(output,expected, "returned Array was [" + expected + "]");
+    });
+
+    QUnit.test("findMax([]) returns -Infinity", function(assert) {
+
+        let list = [];
+
+        let output = findMax(list);
+
+        let expected = -Infinity;
+
+        assert.strictEqual(output,expected, "returned number was " + expected );
+    });
+
+    QUnit.test("findMax([1]) returns 1", function(assert) {
+
+        let list = [1];
+
+        let output = findMax(list);
+
+        let expected = 1;
+
+        assert.strictEqual(output,expected, "returned number was " + expected );
+    });
+
+    QUnit.test("findMax([1,2,3]) returns 3", function(assert) {
+
+        let list = [1,2,3];
+
+        let output = findMax(list);
+
+        let expected = 3;
+
+        assert.strictEqual(output,expected, "returned number was " + expected );
+    });
+
+    QUnit.test("findMax([-1,-2,-3]) returns -1", function(assert) {
+
+        let list = [-1,-2,-3];
+
+        let output = findMax(list);
+
+        let expected = -1;
+
+        assert.strictEqual(output,expected, "returned number was " + expected );
+    });
+
+    QUnit.test("tryLargestNumber([1,2], 3) returns [2,1]", function(assert) {
+
+        let list = [1,2];
+
+        let k = 3;
+
+        let output = tryLargestNumber(list,k).toString();
+
+        let expected = [2,1].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
     });
 
 

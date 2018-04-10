@@ -8,40 +8,41 @@ Bonus: Can you do this in one pass?
 
 "use strict" // avoid errors
 
-function removeLargeSummands(k, list) {
+/*
+removes numbers larger than k from list and returns list
+*/
+function removeLargeNumbers(k, list) {
     for (var i = 0; i < list.length; i++) {
         if (list[i] > k) {
-            list.splice(i,1);
+            list.splice(i--,1);
         }
     }
     return list;
 }
 
-function findSummand(k, list) {
-    let summand = 0;
+/*
+finds the maximum of a list
+returns -Infinity if list is empty
+*/
+function findMax(list) {
+    let max = -Infinity;
 
     for (var i = 0; i < list.length; i++) {
-        if (list[i] <= k) {
-            summand = list.slice(i);
-            list.splice(i,1);
+        if (list[i] > max) {
+            max = list[i];
         }
     }
-    return summand;
+    return max;
 }
 
-function sumToK(k, list) {
-    let sumsUp = false;
+/*
+tries a number by substracting it from k and
+looking up if there is the missing other summand
+return found numbers, or delete number from list
+*/
+function tryNumber(number, list, k) {
 
-    let summandA = 0;
-    let summandB = 0;
 
-    removeLargeSumands(k,list);
-    summandA = findSummand(k,list);
-    summandB = findSummand(k,List);
 
-    if(summandA+summandB == k) {
-        sumsUp = true;
-    }
-
-    return sumsUp;
+    return numbers;
 }
