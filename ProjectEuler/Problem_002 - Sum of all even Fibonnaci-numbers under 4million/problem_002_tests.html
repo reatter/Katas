@@ -96,16 +96,16 @@
         assert.equal(output,expected);
     });
 
-    QUnit.test("addFiboUntil(9) returns 1+2+3+5+8 = 19", function(assert) {
+    QUnit.test("addEvenFiboUntil(9) returns 2+8 = 10", function(assert) {
 
-        let output = addFiboUntil(9);
+        let output = addEvenFiboUntil(9);
 
-        let expected = 19;
+        let expected = 10;
 
         assert.equal(output,expected);
     });
 
-
+    alert(addEvenFiboUntil(4000000));
 
 
 

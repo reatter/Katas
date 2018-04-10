@@ -26,9 +26,16 @@ function fibonacci(n) {
     return result;
 }
 
-function addFiboUntil(limit) {
+function addEvenFiboUntil(limit) {
     let sum = 0;
-    
+    let i = 1;
+
+    while (fibonacci(i) < limit) {
+        if (fibonacci(i) % 2 === 0) {
+            sum += fibonacci(i);
+        }
+        i++;
+    }
 
     return sum;
 }
