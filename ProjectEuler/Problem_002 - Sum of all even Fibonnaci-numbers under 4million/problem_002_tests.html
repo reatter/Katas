@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit - Project Euler Problem 2</title>
+
+    <link rel="stylesheet"
+    href="https://code.jquery.com/qunit/qunit-2.5.1.css">
+
+
+    <!-- import tested js -->
+    <script src="problem_002.js"></script>
+
+
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- import qunit.js -->
+    <script src="file://c:/JS/qunit-2.5.1/qunit-2.5.1.js"></script>
+
+    <!-- here the tests start -->
+    <script>
+
+
+    QUnit.test("fibonacci(0) returns 1", function(assert) {
+
+        let output = fibonacci(0);
+
+        let expected = 1;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(1) returns 1", function(assert) {
+
+        let output = fibonacci(1);
+
+        let expected = 1;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(2) returns 2", function(assert) {
+
+        let output = fibonacci(2);
+
+        let expected = 2;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(3) returns 3", function(assert) {
+
+        let output = fibonacci(3);
+
+        let expected = 3;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(4) returns 5", function(assert) {
+
+        let output = fibonacci(4);
+
+        let expected = 5;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(5) returns 8", function(assert) {
+
+        let output = fibonacci(5);
+
+        let expected = 8;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(6) returns 13", function(assert) {
+
+        let output = fibonacci(6);
+
+        let expected = 13;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("fibonacci(7) returns 21", function(assert) {
+
+        let output = fibonacci(7);
+
+        let expected = 21;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("addFiboUntil(9) returns 1+2+3+5+8 = 19", function(assert) {
+
+        let output = addFiboUntil(9);
+
+        let expected = 19;
+
+        assert.equal(output,expected);
+    });
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
