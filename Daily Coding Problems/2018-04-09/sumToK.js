@@ -58,9 +58,13 @@ function tryNumbers(list, k) {
 
     let secondNumber;
 
+    function sumsUp() {
+         return (secondNumber + largestNumber == k);
+     }
+
     for(var i = 0; i < list.length; i++) {
         secondNumber = list[i];
-        if (secondNumber + largestNumber == k) {
+        if (sumsUp()) {
             numbers = [largestNumber, secondNumber];
         }
     }
@@ -68,10 +72,9 @@ function tryNumbers(list, k) {
     /*
     recursive call here to test all numbers, until list is empty or pair is found
     */
-    while (numbers == [] || list != []) {
+    if (!sumsUp() && list.length != 0) {
         tryNumbers(list, k);
     }
-
 
     return numbers;
 }

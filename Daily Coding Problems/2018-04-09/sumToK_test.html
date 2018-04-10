@@ -190,6 +190,19 @@
         assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
     });
 
+    QUnit.test("tryNumbers([], 0) returns []", function(assert) {
+
+        let list = [];
+
+        let k = 0;
+
+        let output = tryNumbers(list,k).toString();
+
+        let expected = [].toString();
+
+        assert.strictEqual(output,expected, "returned numbers were [" + expected + "]");
+    });
+
 
 
 
