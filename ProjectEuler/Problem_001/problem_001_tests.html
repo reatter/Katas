@@ -24,27 +24,85 @@
     <script>
 
 
-    QUnit.test("multiplesOfThree(0) returns []", function(assert) {
+    QUnit.test("multipleOfThree(0) returns false", function(assert) {
 
         let input = 0;
 
-        let output = multiplesOfThree(input);
+        let output = multipleOfThree(input);
 
-        let expected = [];
+        let expected = false;
 
         assert.equal(output,expected);
     });
 
-    QUnit.test("multiplesOfThree(3) returns [3]", function(assert) {
+    QUnit.test("multipleOfThree(3) returns true", function(assert) {
 
         let input = 3;
 
-        let output = multiplesOfThree(input);
+        let output = multipleOfThree(input)
 
-        let expected = [3];
+        let expected = true;
 
         assert.equal(output,expected);
     });
+
+    QUnit.test("multipleOfThree(5) returns false", function(assert) {
+
+        let input = 5;
+
+        let output = multipleOfThree(input);
+
+        let expected = false;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(5) returns true", function(assert) {
+
+        let input = 5;
+
+        let output = multipleOfFive(input);
+
+        let expected = true;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(3) returns false", function(assert) {
+
+        let input = 3;
+
+        let output = multipleOfFive(input);
+
+        let expected = false;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(15) returns true", function(assert) {
+
+        let input = 15;
+
+        let output = multipleOfFive(input);
+
+        let expected = true;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("addMultiplesOfThreeAndFive(10) returns 23", function(assert) {
+
+        let input = 10;
+
+        let output = addMultiplesOfThreeAndFive(input);
+
+        let expected = 23;
+
+        assert.equal(output,expected);
+    });
+
+    alert(addMultiplesOfThreeAndFive(1000));
+
 
 
 
