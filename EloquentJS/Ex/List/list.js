@@ -39,12 +39,25 @@ function arrayToList(array) {
     if (rest.length > 0) {
         list.rest = arrayToList(rest)
     } else {
-       list.rest = null
+        list.rest = null
     }
 
     return list
 }
 
+// let result = arrayToList([1,2,3])
 
-let result = arrayToList([1,2,3])
+// listToArray
+var i = 0
+
+function listToArray(list,_array = []) {
+
+    if (list != null) {
+        _array.push(list.value)
+        listToArray(list.rest,_array)
+    }
+    return _array
+}
+
+let result = listToArray(list)
 console.log(result)
