@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit - Project Euler Problem 1</title>
+
+    <link rel="stylesheet"
+    href="https://code.jquery.com/qunit/qunit-2.5.1.css">
+
+
+    <!-- import tested js -->
+    <script src="problem_001.js"></script>
+
+
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- import qunit.js -->
+    <script src="file://c:/JS/qunit-2.5.1/qunit-2.5.1.js"></script>
+
+    <!-- here the tests start -->
+    <script>
+
+
+    QUnit.test("multipleOfThree(0) returns false", function(assert) {
+
+        let input = 0;
+
+        let output = multipleOfThree(input);
+
+        let expected = false;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfThree(3) returns true", function(assert) {
+
+        let input = 3;
+
+        let output = multipleOfThree(input)
+
+        let expected = true;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfThree(5) returns false", function(assert) {
+
+        let input = 5;
+
+        let output = multipleOfThree(input);
+
+        let expected = false;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(5) returns true", function(assert) {
+
+        let input = 5;
+
+        let output = multipleOfFive(input);
+
+        let expected = true;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(3) returns false", function(assert) {
+
+        let input = 3;
+
+        let output = multipleOfFive(input);
+
+        let expected = false;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("multipleOfFive(15) returns true", function(assert) {
+
+        let input = 15;
+
+        let output = multipleOfFive(input);
+
+        let expected = true;
+
+        assert.equal(output,expected);
+    });
+
+    QUnit.test("addMultiplesOfThreeAndFive(10) returns 23", function(assert) {
+
+        let input = 10;
+
+        let output = addMultiplesOfThreeAndFive(input);
+
+        let expected = 23;
+
+        assert.equal(output,expected);
+    });
+
+    alert(addMultiplesOfThreeAndFive(1000));
+
+
+
+
+    </script>
+</body>
+</html>
