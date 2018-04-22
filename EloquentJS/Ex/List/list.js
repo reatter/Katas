@@ -2,10 +2,19 @@
 // the last element is null terminated
 // implement listToArray and arrayToList
 
+let list = {
+    value: 1,
+    rest: {
+        {
+            value: 2,
+            rest: {
+                {
+                    value: 3,
+                    rest: null
+                }
+            }
+        }
+    }
+}
 
-let example =   {   value:1,
-                    rest:{{value:2,
-                           rest:{{value:3,
-                                  rest:{null}}}}}}
-
-console.log(example)
+console.log(list.value,list.next)
