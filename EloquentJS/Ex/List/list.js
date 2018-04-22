@@ -29,21 +29,22 @@ var is_array = function (value) {
 
 function arrayToList(array) {
     if (!is_array(array)) {
-        console.log(array," is not an Array!")
         return
     }
 
     let list = {}
 
-    for(let e of array) {
-        list.value = e
-        array.splice(1)
-        list.rest = array
+    list.value = array[0]
+    let rest = array.slice(1)
+    if (rest.length > 0) {
+        list.rest = arrayToList(rest)
+    } else {
+       list.rest = null
     }
 
     return list
 }
 
 
-//let result = arrayToList([1,2,3])
-//console.log(result)
+let result = arrayToList([1,2,3])
+console.log(result)
