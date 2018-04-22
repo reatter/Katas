@@ -5,16 +5,21 @@
 let list = {
     value: 1,
     rest: {
-        {
-            value: 2,
-            rest: {
-                {
-                    value: 3,
-                    rest: null
-                }
-            }
+        value: 2,
+        rest: {
+            value: 3,
+            rest: null
         }
     }
 }
 
-console.log(list.value,list.next)
+
+// rescurse functions, i am very smart
+function show(input) {
+    console.log(input.value)
+    if(input.rest != null)
+        show(input.rest)
+}
+
+
+show(list)
